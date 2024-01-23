@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <div id="app">
+      <form class="grid max-w-80 m-auto gap-4">
+        <div class="grid">
+          <label for="firstName" class="font-bold">First name</label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            class="border-2 border-black p-2"
+          />
+        </div>
+        <div class="grid">
+          <label for="lastName" class="font-bold">Last name</label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            class="border-2 border-black p-2"
+          />
+        </div>
+        <div class="grid">
+          <label for="email" class="font-bold">Email address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="border-2 border-black p-2"
+          />
+        </div>
+        <div class="grid">
+          <label for="password" class="font-bold">Password</label>
+          <p id="passwordhint">
+            Must contain 8+ characters with at least 1 number and 1 uppercase
+            letter
+          </p>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            aria-describedby="passwordhint"
+            class="border-2 border-black p-2 placeholder:font-medium"
+          />
+        </div>
+        <input type="submit" value="Register" />
+      </form>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
