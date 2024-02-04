@@ -13,6 +13,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-input:focus {
+input:focus,
+button:focus {
   outline: 4px solid #ffbf47;
+}
+
+input[type="password"]::-ms-reveal {
+  display: none;
 }

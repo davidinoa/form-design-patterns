@@ -1,0 +1,77 @@
+<main id="registration-form" class="max-w-80 m-auto">
+  <svg class="hidden">
+    <symbol id="error-icon" viewBox="0 0 24 24">
+      <path d="M0 0h24v24H0z" fill="none"></path>
+      <path
+        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+      ></path>
+    </symbol>
+  </svg>
+  <h1 class="text-[2.5rem] leading-none font-bold text-[#2d3748]">Register</h1>
+  <div
+    id="error-summary"
+    role="group"
+    tabindex="-1"
+    aria-labelledby="error-summary-heading"
+    class="hidden"
+  >
+    <h2 id="error-summary-heading" class="font-bold text-lg">
+      There is a problem
+    </h2>
+    <ul class="list-disc list-inside">
+      <li>
+        <a href="#email">Enter your email address</a>
+      </li>
+      <li>
+        <a href="#password">The password must contain an uppercase letter</a>
+      </li>
+    </ul>
+  </div>
+  <form novalidate class="grid gap-4 p-2">
+    <div class="grid">
+      <label for="email" class="font-bold">
+        Email address
+        <span
+          class="field-error | flex gap-2 items-center text-red-600 [&_svg]:fill-red-600"
+        >
+          <svg width="1.3em" height="1.3em">
+            <use xlink:href="#error-icon"></use>
+          </svg>
+          Enter your email address
+        </span>
+      </label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        autocomplete="false"
+        aria-invalid="false"
+        class="border-2 border-black p-2"
+      />
+    </div>
+    <div class="grid gap-2">
+      <label for="password" class="grid">
+        <span class="font-bold">Password</span>
+        <span class="leading-snug"
+          >Must contain 8+ characters with at least 1 number and 1 uppercase
+          letter</span
+        >
+      </label>
+      <div class="flex">
+        <input
+          type="password"
+          id="password"
+          name="password"
+          autocomplete="false"
+          aria-invalid="false"
+          class="border-2 border-black p-2 placeholder:font-medium grow"
+        />
+      </div>
+    </div>
+    <input
+      type="submit"
+      value="Register"
+      class="bg-[#38a169] text-[#f7fafc] hover:bg-[#246844] text-lg px-[30px] py-[15px] font-bold rounded w-fit leading-snug"
+    />
+  </form>
+</main>
